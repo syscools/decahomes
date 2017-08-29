@@ -20,4 +20,7 @@
   "dependencies": {
     "express": "^4.15.4"
   }
+  "engines": {
+    "node": "6.9.4"
+  }
 }

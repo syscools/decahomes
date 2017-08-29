@@ -13,6 +13,6 @@ app.get('/env', function (req,res) {
     res.send(html);
 });
 
-app.listen(3000,function () {
-    console.log("listening 3000");
+app.listen(process.env.PORT,function () {
+    console.log("listening %s",process.env.PORT);
 });
