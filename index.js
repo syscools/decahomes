@@ -13,6 +13,7 @@ app.get('/env', function (req,res) {
     res.send(html);
 });
 
-app.listen(process.env.PORT,function () {
-    console.log("listening %s",process.env.PORT);
+let port = process.env.PORT ? process.env.PORT : 6379;
+app.listen(port,function () {
+    console.log("listening %s",port);
 });
