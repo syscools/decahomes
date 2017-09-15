@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/ifelsemonkey/decahomes#readme",
   "dependencies": {
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "redis": "^2.8.0"
   },
   "engines": {
     "node": "6.11.3"
