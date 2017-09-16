@@ -54,8 +54,12 @@ app.get('/get/:key', function (req, res) {
     console.log("GET /get/" + req.params.key);
 
     client.get(req.params.key,(err,reply) => {
-        console.log(reply);
-        res.send(reply);
+        if (reply != null) {
+            console.log(reply);
+            res.send(reply);
+        } else {
+            res.send("key not found");
+        }
     });
 });
 
