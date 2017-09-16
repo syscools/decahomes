@@ -41,8 +41,12 @@ app.get('/env', function (req,res) {
 
 app.get('/node',function (req,res) {
     exec('/home/vcap/app/vendor/node/bin/node --version', function callback(error, stdout, stderr){
-        // result
-        res.send(stdout);
+	if (error) { 
+	    res.send(error);
+            console.log(error);
+        } else {
+            res.send(stdout);
+        }
     });
 });
 
